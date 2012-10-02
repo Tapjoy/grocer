@@ -8,6 +8,12 @@ require 'grocer/server'
 
 module Grocer
 
+  @@connections = {}
+
+  def self.connections
+    @@connections 
+  end
+
   def self.env
     ENV['RAILS_ENV'] || ENV['RACK_ENV'] || 'development'
   end
